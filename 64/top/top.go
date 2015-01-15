@@ -11,7 +11,7 @@ func Top(ts0 *[1]uintptr, compar func(*uint64, *uint64) int, dst []uint64, src [
 
 	heap.Heapify(ts0, compar, dst, dst)
 
-	for i := (len(dst)/incr); i < (len(src)/incr); i++ {
+	for i := (len(dst) / incr); i < (len(src) / incr); i++ {
 		if compar(&dst[0], &src[i*incr]) < 0 {
 			for q := 0; q < incr; q++ { // copy
 				dst[q] = src[incr*i+q]

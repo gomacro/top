@@ -91,7 +91,7 @@ func TestCustom0(t *testing.T) {
 		return compare.Int64(&r.BoxOffice, &l.BoxOffice)
 	}
 
-	data := []Movie {
+	data := []Movie{
 		{"Iron Man", 5000000},
 		{"Independence Day", 1000000},
 		{"Fargo", 3000000},

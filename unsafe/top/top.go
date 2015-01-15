@@ -6,8 +6,8 @@
 package top
 
 import (
-	top64 "github.com/gomacro/top/64/top"
 	top32 "github.com/gomacro/top/32/top"
+	top64 "github.com/gomacro/top/64/top"
 	top8 "github.com/gomacro/top/8/top"
 	"reflect"
 	"unsafe"
@@ -68,9 +68,11 @@ func u64(slice interface{}, size uintptr) (src []uint64) {
 	h.Cap *= int(size)
 	return src
 }
+
 ////////////////////////////////////////////////////////////////////////////////
 
 // Top selects the maximum (minimum) elements from a src slice to dst slice.
+// The number of selected elements is limited to the size of the dst (src) slice.
 // The compar is the Compare() function.
 // The dst slice (the result) is not guaranteed to be sorted.
 func Top(compar, dst, src interface{}) {
