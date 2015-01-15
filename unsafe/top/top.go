@@ -1,3 +1,8 @@
+// Copyright 2015 The GOMACRO Authors. All rights reserved.
+// Use of this source code is governed by a GPLv2-style
+// license that can be found in the LICENSE file.
+
+// Package top provides a Top() for slices.
 package top
 
 import (
@@ -64,6 +69,10 @@ func u64(slice interface{}, size uintptr) (src []uint64) {
 	return src
 }
 ////////////////////////////////////////////////////////////////////////////////
+
+// Top selects the maximum (minimum) elements from a src slice to dst slice.
+// The compar is the Compare() function.
+// The dst slice (the result) is not guaranteed to be sorted.
 func Top(compar, dst, src interface{}) {
 	size := elemsize(src) //8,4,1
 
