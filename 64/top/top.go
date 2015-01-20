@@ -1,3 +1,4 @@
+// Package top is a 64-bit macro function, callable from a third-party macros.
 package top
 
 import (
