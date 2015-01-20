@@ -12,4 +12,4 @@ Get Top N items from a slice, using a compare function.
 
 GPLv2
 
-Version: v0.0
+Version: v0.1
